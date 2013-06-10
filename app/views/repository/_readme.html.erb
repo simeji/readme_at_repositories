@@ -1,0 +1,12 @@
+<h2 id="toggle_readme_block"><a>README</a></h2>
+<div id="readme_at_repo_dir" class="wiki">
+  <%= html.html_safe.force_encoding('UTF-8') %>
+</div>
+
+<script type="text/javascript">
+$().ready(function(){
+  $("#toggle_readme_block").click(function(){
+    $("#readme_at_repo_dir").toggle(500);
+  });
+});
+</script>
