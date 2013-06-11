@@ -28,6 +28,11 @@ After that, please restart your redmine.
 After installation, you can display README content, at the top of your project's "Repository" page   
 (any directory)
 
+# Requirements
+
+Redmine version 1.4 or later  
+(2.x is ok)
+
 # Licence
 
 **This plugin is released under the MIT license.**
