@@ -39,7 +39,7 @@ If you installed plugin for supporting Markdown, (for example
 ) you cloud display README that is formatted.
 
 Your project Overview page. You click Repository tab.  
-![Top project](https://raw.github.com/simeji/readme_at_repositories/master/doc/repository_view.png)
+![Top project](https://raw.github.com/simeji/readme_at_repositories/master/doc/top_navibar.png)
 
 
 You can show content of README.md (.txt, .rdoc, any extension ok. But only .md will be formatted.)  
