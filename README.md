@@ -1,13 +1,17 @@
 README at Repositories
-=====
+=======================
 
-Redmine plugin that displays contents of file named "README.md" at repository tab
+This is redmine plugin for displays contents of file named "README.md" at repository tab.
 
-# Installation
+If you want to understand Redmine,  
+see [the official site](http://www.redmine.org/) .
 
-Only deploy source code to your redmine plugin directory
+Installation
+----------------
 
-*$REDMINE_ROOT* means your redmine root directory
+Only deploy source code to your redmine plugin directory.
+
+*$REDMINE_ROOT* means your redmine root directory.
 
 Redmine version 1.x  
 >> **{$REDMINE_ROOT}/vendor/plugins**  
@@ -23,17 +27,34 @@ Installation is very easy.
     
 After that, please restart your redmine.
 
-# How to display READMEs
 
-After installation, you can display README content, at the top of your project's "Repository" page   
+How to display READMEs
+----------------
+
+After installation, you can display README content, at the top of your project's "Repository" page.
 (any directory)
 
-# Requirements
+If you installed plugin for supporting Markdown, (for example 
+[Redmine Redcarpet Markdown formatter](http://example.co://github.com/alminium/redmine_redcarpet_formatter)
+) you cloud display README that is formatted.
 
-Redmine version 1.4 or later  
+Your project Overview page. You click Repository tab.  
+![Top project](https://raw.github.com/simeji/readme_at_repositories/master/doc/repository_view.png)
+
+
+You can show content of README.md (.txt, .rdoc, any extension ok. But only .md will be formatted.)  
+![Repository Tab](https://raw.github.com/simeji/readme_at_repositories/master/doc/repository_view.png)
+
+
+Requirements
+----------------
+
+Redmine version 1.4 or later. 
 (2.x is ok)
 
-# Licence
+
+Licence
+----------------
 
 **This plugin is released under the MIT license.**
 
