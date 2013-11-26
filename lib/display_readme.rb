@@ -9,7 +9,7 @@ class DisplayReadme < Redmine::Hook::ViewListener
     repo_id = context[:request].params['repository_id']
 
     blk = repo_id ? lambda { |r| r.identifier == repo_id } : lambda { |r| r.is_default }
-    repo = context[:project].repositories.find &blk
+    repo = context[:project].respond_to?(:repositories) ? context[:project].repositories.find(&blk) : context[:project].repository
 
     unless file = (repo.entries(path, rev) || []).find { |entry| entry.name =~ /README((\.).*)?/i }
       return ''
