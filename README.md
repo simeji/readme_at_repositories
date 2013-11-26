@@ -1,31 +1,28 @@
 README at Repositories
 =======================
 
-This is redmine plugin for displays contents of file named "README.md" at repository tab.
+This is redmine(& chiliproject) plugin for displays contents of file named "README.md" at repository tab.
 
 If you want to understand Redmine,  
 see [the official site](http://www.redmine.org/) .
 
-Installation
+Installation (For ChiliProject)
 ----------------
 
 Only deploy source code to your redmine plugin directory.
 
-*$REDMINE_ROOT* means your redmine root directory.
+*$REDMINE_ROOT* means your ChiliProject root directory.
 
-Redmine version 1.x  
->> **{$REDMINE_ROOT}/vendor/plugins**  
+>> **{$CHILI_PROJECT_ROOT}/vendor/chiliproject_plugins**  
  
-Redmine version 2.x  
->> **{$REDMINE_ROOT}/plugins**
-
 
 Installation is very easy.
 
-    cd your_redmine_plugin_directory
+    cd your_chiliproject_plugin_directory
     git clone git://github.com/simeji/readme_at_repositories.git
+    git checkout chiliproject
     
-After that, please restart your redmine.
+After that, please restart your chiliproject.
 
 
 How to display READMEs
@@ -49,9 +46,7 @@ You can show content of README.md (.txt, .rdoc, any extension ok. But only .md w
 Requirements
 ----------------
 
-Redmine version 1.4 or later. 
-(2.x is ok)
-
+ChiliProject version 3.x or later. 
 
 Licence
 ----------------
