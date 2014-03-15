@@ -15,7 +15,9 @@ class DisplayReadme < Redmine::Hook::ViewListener
       return ''
     end
 
-    raw_readme_text = repo.cat(file.path, rev)
+    unless raw_readme_text = repo.cat(file.path, rev)
+      return ''
+    end
 
     formatter_name = ''
     if @@markdown_ext.include?(File.extname(file.path))
