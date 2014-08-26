@@ -25,7 +25,22 @@ Installation is very easy.
     cd your_redmine_plugin_directory
     git clone git://github.com/simeji/readme_at_repositories.git
     
-After that, please restart your redmine.
+After that, optionally pick a template (see below), then restart your redmine.
+
+
+Picking a template
+------------------
+
+You can pick a template that gets used on the repositories page from:
+>> **{$PLUGIN_ROOT}/app/views/repository**
+
+The default template used (_readme.html.erb) will show the README file when the page loads.
+_readme.html.hidden.erb will hide the README file when the page loads.
+
+To switch to any other template, simply rename the template you want to use, then restart your redmine:
+
+    mv _readme.html.erb _readme.html.visible.erb
+    mv _readme.html.hidden.erb _readme.html.erb
 
 
 How to display READMEs

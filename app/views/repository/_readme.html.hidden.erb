@@ -1,5 +1,5 @@
-<h2 id="toggle_readme_block"><a>README</a></h2>
-<div id="readme_at_repo_dir" class="wiki">
+<h2 id="toggle_readme_block">README <a style="cursor:pointer;">(show +)</a></h2>
+<div id="readme_at_repo_dir" class="wiki" style="display:none;">
   <% if html.html_safe.respond_to?(:force_encoding) %>
     <%= html.html_safe.force_encoding('UTF-8') %>
   <% else %>
@@ -11,6 +11,12 @@
 $(document).ready(function(){
   $("#toggle_readme_block").click(function(){
     $("#readme_at_repo_dir").toggle(500);
+
+    if ($("#toggle_readme_block a").text() === "(show +)") {
+      $("#toggle_readme_block a").text("(hide -)");
+    } else {
+      $("#toggle_readme_block a").text("(show +)");
+    }
   });
 });
 </script>
