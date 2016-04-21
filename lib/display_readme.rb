@@ -31,9 +31,11 @@ class DisplayReadme < Redmine::Hook::ViewListener
 
     formatter = Redmine::WikiFormatting.formatter_for(formatter_name).new(raw_readme_text)
 
+    rar_setting = RarProjectSetting.find(context[:project].id)
+
     context[:controller].send(:render_to_string, {
       :partial => 'repository/readme',
-      :locals => {:html => formatter.to_html}
+      :locals => {:html => formatter.to_html, position: rar_setting[:position], show: rar_setting[:show] }
     })
   end
 end
