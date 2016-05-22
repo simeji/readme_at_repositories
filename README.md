@@ -37,7 +37,7 @@ After installation, you can display README content, at the top of your project's
 If you installed plugin for supporting Markdown, (for example [Redmine Redcarpet Markdown formatter](https://github.com/alminium/redmine_redcarpet_formatter)) you cloud display README that is formatted.
 
 
-To enable this plugin, Please select  'Readme at repository', "Settings" => "Modules" in your project.
+To enable this plugin, Please select  'Readme at repository', "Settings" => "Modules" in your project.  
 [RarProjectTab](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/project_module.png)
 
 You click Repository tab.  
@@ -51,10 +51,10 @@ If you want to change the position of your README, please read "Setting" section
 Setting
 ----------------
 
-If you want to change the position of your README, you can configure the settings easy.
+If you want to change the position of your README, you can configure the settings easy.  
 [ReadmeProjectSettings](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/project_setting.png)
 
-You can give permissionx to configure above settiogs in 'Administration' => 'Roles and permissions' page.
+You can give permissionx to configure above settiogs in 'Administration' => 'Roles and permissions' page.  
 [RarAdminRole](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/permission.png)
 
 
