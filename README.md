@@ -16,7 +16,7 @@ Only deploy source code to your redmine plugin directory.
 Redmine version 1.x  
 >> **{$REDMINE_ROOT}/vendor/plugins**  
  
-Redmine version 2.x  
+Redmine version 2.x and lator(3.x)
 >> **{$REDMINE_ROOT}/plugins**
 
 
@@ -24,24 +24,9 @@ Installation is very easy.
 
     cd your_redmine_plugin_directory
     git clone git://github.com/simeji/readme_at_repositories.git
+    bundle exec rake redmine:plugins:migrate RAILS_ENV=production
     
-After that, optionally pick a template (see below), then restart your redmine.
-
-
-Picking a template
-------------------
-
-You can pick a template that gets used on the repositories page from:
->> **{$PLUGIN_ROOT}/app/views/repository**
-
-The default template used (_readme.html.erb) will show the README file when the page loads.
-_readme.html.hidden.erb will hide the README file when the page loads.
-
-To switch to any other template, simply rename the template you want to use, then restart your redmine:
-
-    mv _readme.html.erb _readme.html.visible.erb
-    mv _readme.html.hidden.erb _readme.html.erb
-
+After that, please restart your redmine.
 
 How to display READMEs
 ----------------
@@ -49,23 +34,35 @@ How to display READMEs
 After installation, you can display README content, at the top of your project's "Repository" page.
 (any directory)
 
-If you installed plugin for supporting Markdown, (for example 
-[Redmine Redcarpet Markdown formatter](http://example.co://github.com/alminium/redmine_redcarpet_formatter)
-) you cloud display README that is formatted.
+If you installed plugin for supporting Markdown, (for example [Redmine Redcarpet Markdown formatter](https://github.com/alminium/redmine_redcarpet_formatter)) you cloud display README that is formatted.
 
-Your project Overview page. You click Repository tab.  
-![Top project](https://raw.github.com/simeji/readme_at_repositories/master/doc/top_navibar.png)
 
+To enable this plugin, Please select  'Readme at repository', "Settings" => "Modules" in your project.
+[RarProjectTab](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/project_module.png)
+
+You click Repository tab.  
+![Top project](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/top_navibar.png)
 
 You can show content of README.md (.txt, .rdoc, any extension ok. But only .md will be formatted.)  
-![Repository Tab](https://raw.github.com/simeji/readme_at_repositories/master/doc/repository_view.png)
+![Repository Tab](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/repository_view.png)
+
+If you want to change the position of your README, please read "Setting" section.
+
+Setting
+----------------
+
+If you want to change the position of your README, you can configure the settings easy.
+[ReadmeProjectSettings](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/project_setting.png)
+
+You can give permissionx to configure above settiogs in 'Administration' => 'Roles and permissions' page.
+[RarAdminRole](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/permission.png)
 
 
 Requirements
 ----------------
 
 Redmine version 1.4 or later. 
-(2.x is ok)
+(2.x, 3.x is ok)
 
 
 Licence

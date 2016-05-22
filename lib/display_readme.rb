@@ -4,6 +4,8 @@ class DisplayReadme < Redmine::Hook::ViewListener
 
   def view_repositories_show_contextual(context)
 
+    return if EnabledModule.where(:project_id => context[:project].id, :name => 'readme_at_repository').empty?
+
     path = context[:request].params['path'] || ''
     rev = (_rev = context[:request].params['rev']).blank? ? nil : _rev
     repo_id = context[:request].params['repository_id']

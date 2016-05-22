@@ -13,7 +13,12 @@ class RarProjectSettingsController < ApplicationController
     r = RarProjectSetting.find(project_id)
     r.position = params[:rar_project_setting][:position]
     r.show = params[:rar_project_setting][:show]
-    r.save
+    res = r.save
+    if res
+      flash[:notice] = "Successful update."
+    else
+      flash[:warning] = "Update error."
+    end
     redirect_to :controller => 'projects', :action => 'settings', :id => @project.id, :tab => 'readme_at_repositories'
   end
 
