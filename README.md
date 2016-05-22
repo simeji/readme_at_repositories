@@ -38,7 +38,7 @@ If you installed plugin for supporting Markdown, (for example [Redmine Redcarpet
 
 
 To enable this plugin, Please select  'Readme at repository', "Settings" => "Modules" in your project.  
-[RarProjectTab](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/project_module.png)
+![RarProjectTab](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/project_module.png)
 
 You click Repository tab.  
 ![Top project](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/top_navibar.png)
@@ -52,10 +52,10 @@ Setting
 ----------------
 
 If you want to change the position of your README, you can configure the settings easy.  
-[ReadmeProjectSettings](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/project_setting.png)
+![ReadmeProjectSettings](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/project_setting.png)
 
 You can give permissionx to configure above settiogs in 'Administration' => 'Roles and permissions' page.  
-[RarAdminRole](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/permission.png)
+![RarAdminRole](https://raw.githubusercontent.com/wiki/simeji/readme_at_repositories/assets/img/permission.png)
 
 
 Requirements
