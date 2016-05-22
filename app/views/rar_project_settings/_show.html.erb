@@ -1,0 +1,42 @@
+<h2>Readme at Repositories ProjectSettings</h2>
+
+<div id="rar_settings">
+<%
+@rar_setting = RarProjectSetting.find_or_create_by(project_id: @project.id)
+%>
+
+<%= labelled_form_for @rar_setting,
+:url => {
+:controller => 'rar_project_settings',
+:action => 'update', :project_id => @project.id}, :method => :post  do |f| %>
+
+<div class="box">
+<table>
+  <tbody>
+    <tr>
+      <th>Readme position</th>
+      <td>
+         <%= content_tag(:position, l(:label_display_position_top)) %>
+         <%= f.radio_button :position, 0, :checked => @rar_setting.position == 0 %>
+         <%= content_tag(:position, l(:label_display_position_middle)) %>
+         <%= f.radio_button :position, 1, :checked => @rar_setting.position == 1 %>
+         <%= content_tag(:position, l(:label_display_position_bottom)) %>
+         <%= f.radio_button :position, 2, :checked => @rar_setting.position == 2 %>
+      </td>
+    </tr>
+    <tr>
+      <th>Default view status</th>
+      <td>
+         <%= content_tag(:show, l(:label_display_default_show)) %>
+         <%= f.radio_button :show, 1, :checked => @rar_setting.show == 1 %>
+         <%= content_tag(:show, l(:label_display_default_hide)) %>
+         <%= f.radio_button :show, 0, :checked => @rar_setting.show == 0 %>
+      </td>
+    </tr>
+</table>
+
+</div>
+<%= f.submit l(:button_update) %>
+<% end %>
+</div>
+
