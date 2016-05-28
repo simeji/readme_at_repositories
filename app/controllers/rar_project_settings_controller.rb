@@ -10,7 +10,7 @@ class RarProjectSettingsController < ApplicationController
 
   def update
     project_id = params[:project_id]
-    r = RarProjectSetting.find(project_id)
+    r = RarProjectSetting.find_or_create_by(project_id: project_id)
     r.position = params[:rar_project_setting][:position]
     r.show = params[:rar_project_setting][:show]
     res = r.save

@@ -4,7 +4,8 @@ class DisplayReadme < Redmine::Hook::ViewListener
 
   def view_repositories_show_contextual(context)
 
-    return if EnabledModule.where(:project_id => context[:project].id, :name => 'readme_at_repository').empty?
+    return if EnabledModule.where(:project_id => context[:project].id, :name => 'readme_at_repository').empty? ||
+      RarProjectSetting.find_by(project_id: context[:project].id).nil?
 
     path = context[:request].params['path'] || ''
     rev = (_rev = context[:request].params['rev']).blank? ? nil : _rev
@@ -33,7 +34,7 @@ class DisplayReadme < Redmine::Hook::ViewListener
 
     formatter = Redmine::WikiFormatting.formatter_for(formatter_name).new(raw_readme_text)
 
-    rar_setting = RarProjectSetting.find(context[:project].id)
+    rar_setting = RarProjectSetting.find_by(project_id: context[:project].id)
 
     context[:controller].send(:render_to_string, {
       :partial => 'repository/readme',
