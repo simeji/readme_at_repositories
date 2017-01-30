@@ -14,7 +14,7 @@
 <table>
   <tbody>
     <tr>
-      <th>Readme position</th>
+      <th><%=l(:label_readme_position) %></th>
       <td>
          <%= content_tag(:position, l(:label_display_position_top)) %>
          <%= f.radio_button :position, 0, :checked => @rar_setting.position == 0 %>
@@ -25,7 +25,7 @@
       </td>
     </tr>
     <tr>
-      <th>Default view status</th>
+      <th><%=l(:label_default_view_status) %></th>
       <td>
          <%= content_tag(:show, l(:label_display_default_show)) %>
          <%= f.radio_button :show, 1, :checked => @rar_setting.show == 1 %>
