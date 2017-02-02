@@ -1,0 +1,11 @@
+de:
+  label_readme_position: "Readme Position"
+  label_display_position_none: "none"
+  label_display_position_top: "Oben"
+  label_display_position_middle: "Mitte"
+  label_display_position_bottom: "Unten"
+  label_project_setting_title: "Readme im Projektarchiv"
+  label_update_setting: "update"
+  label_default_view_status: "Anzeigeverhalten"
+  label_display_default_show: "zeigen"
+  label_display_default_hide: "verstecken"
