@@ -1,9 +1,11 @@
 en:
+  label_readme_position: "Readme position"
   label_display_position_none: "none"
   label_display_position_top: "top"
   label_display_position_middle: "midle"
   label_display_position_bottom: "bottom"
   label_project_setting_title: "Readme at Repository"
   label_update_setting: "update"
+  label_default_view_status: "Default view status"
   label_display_default_show: "show"
   label_display_default_hide: "hide"
