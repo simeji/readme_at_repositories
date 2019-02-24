@@ -14,9 +14,9 @@ Redmine::Plugin.register :readme_at_repositories do
   end
 end
 
-ActionDispatch::Callbacks.to_prepare  do 
+ActiveSupport::Reloader.to_prepare do
   require_dependency 'projects_helper'
   unless ProjectsHelper.included_modules.include? ExtendRarProjectsSetting
     ProjectsHelper.send(:include, ExtendRarProjectsSetting)
-  end 
-end 
+  end
+end
