@@ -6,7 +6,7 @@ module ExtendRarProjectsSetting
 
     base.class_eval do
       unloadable
-      alias_method_chain :project_settings_tabs, :readme_at_repositories
+      # alias_method_chain :project_settings_tabs, :readme_at_repositories
     end
 
   end

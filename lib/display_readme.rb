@@ -19,7 +19,7 @@ class DisplayReadme < Redmine::Hook::ViewListener
       return ''
     end
 
-    unless file = (repo.entries(path, rev) || []).find { |entry| entry.name =~ /README((\.).*)?/i }
+    unless file = (repo.entries(path, rev) || []).find { |entry| entry.name =~ /!?README((\.).*)?/i }
       return ''
     end
 
