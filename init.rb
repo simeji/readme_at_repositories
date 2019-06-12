@@ -1,5 +1,4 @@
-require 'display_readme'
-require 'extend_project_setting'
+require 'redmine'
 
 Redmine::Plugin.register :readme_at_repositories do
   name 'Readme At Repositories plugin'
@@ -14,9 +13,7 @@ Redmine::Plugin.register :readme_at_repositories do
   end
 end
 
-ActionDispatch::Callbacks.to_prepare  do 
-  require_dependency 'projects_helper'
-  unless ProjectsHelper.included_modules.include? ExtendRarProjectsSetting
-    ProjectsHelper.send(:include, ExtendRarProjectsSetting)
-  end 
+Rails.configuration.to_prepare do
+  require_dependency 'display_readme'
+  require_dependency 'extend_project_setting'
 end 
