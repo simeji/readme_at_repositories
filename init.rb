@@ -1,5 +1,6 @@
-require 'display_readme'
-require 'extend_project_setting'
+require File.expand_path('lib/display_readme', __dir__)
+require File.expand_path('lib/extend_rar_projects_setting', __dir__)
+require File.expand_path('lib/rar_project_setting_extension', __dir__)
 
 Redmine::Plugin.register :readme_at_repositories do
   name 'Readme At Repositories plugin'
