@@ -10,7 +10,7 @@ module ExtendRarProjectsSetting
         :label => :label_project_setting_title
       }
       tabs = super
-      tabs << action if User.current.allowed_to?(action, @project)
+      tabs << action if @project.module_enabled?(:readme_at_repository)
       return tabs
     end
 
