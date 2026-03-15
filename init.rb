@@ -15,7 +15,7 @@ end
 
 Rails.configuration.to_prepare do
   require_dependency 'display_readme'
-  require_dependency 'extend_project_setting'
+  require_dependency 'extend_rar_projects_setting'
   unless ProjectsHelper.included_modules.include?(ExtendRarProjectsSetting::RarProjectSettingExtension)
     ProjectsHelper.prepend ExtendRarProjectsSetting::RarProjectSettingExtension
   end
